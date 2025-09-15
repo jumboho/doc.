@@ -19,7 +19,7 @@ def main():
 
     @st.cache_data(persist=True)
     def load_data():
-        data = pd.read_csv('/Users/alexandrasantos/Downloads/mushroom_data_all.csv')
+        data = pd.read_csv('mushroom_data_all.csv')
         label = LabelEncoder()
         for col in data.columns:
             data[col] = label.fit_transform(data[col])
